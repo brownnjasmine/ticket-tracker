@@ -1,10 +1,10 @@
-CREATE SCHEMA tickets;
+
 
 CREATE TABLE tickets (
-    id SERIAL PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
-    severity TEXT NOT NULL,       -- e.g. 'low', 'medium', 'high'
+    severity TEXT NOT NULL DEFAULT 'low',       -- e.g. 'low', 'medium', 'high'
     status TEXT NOT NULL DEFAULT 'open',  -- 'open', 'in_progress', 'resolved'
     category TEXT,                -- 'bug', 'feature', 'ux', etc.
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),
