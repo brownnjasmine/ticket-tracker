@@ -1,3 +1,5 @@
+CREATE SCHEMA tickets;
+
 CREATE TABLE tickets (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
